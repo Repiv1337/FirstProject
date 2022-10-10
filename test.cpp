@@ -1,10 +1,18 @@
 #include <iostream>
+#include <vector>
+
+std::vector<int> manis(std::vector<int> vec){
+    for(unsigned int i=0;i<vec.size();i++){
+        vec[i] = vec[i]*2;
+    }
+    return vec;
+}
+
 
 int main(){
-std::cout << "Hello World in C++" << std::endl;
-std::cout << "goin for second change" << std::endl;
-std::cout << "going for third change" << std::endl;
-std::cout << "fourth change" << std::endl;
-std::cout << "today is 10.10 of oct" << std::endl;
-return 0;
+    std::vector<int> vect = {{1,2,3,4}};
+    std::vector<int> ne = manis(vect);
+    for(auto x: ne){
+        std::cout << x << " ";
+    }
 }
