@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <vector>
 using namespace std;
  
 // Merges two subarrays of array[].
@@ -74,6 +75,7 @@ void mergeSort(int array[], int const begin, int const end)
     mergeSort(array, begin, mid);
     mergeSort(array, mid + 1, end);
     merge(array, begin, mid, end);
+    long long a;
 }
  
 
@@ -87,7 +89,11 @@ void printArray(int A[], int size)
 int main()
 {
 
-    
+
+    std::vector<int> vec (5,-1);
+    for(auto x:vec){
+        std::cout << x << " ";
+    }
     const int size = 60;
     int arr[size];
     std::random_device rd; // obtain a random number from hardware
